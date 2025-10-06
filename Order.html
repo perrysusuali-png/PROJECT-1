@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Your Order | Matts Baskets</title>
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-top: 40px;
+  color: #2e7d32;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.order-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 500px;
+  margin: 40px 0;
+}
+
+.order-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.order-form input,
+.order-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.order-form input:focus,
+.order-form textarea:focus {
+  border-color: #2e7d32;
+  outline: none;
+}
+
+.order-form button {
+  background-color: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-form button:hover {
+  background-color: #256828;
+}
+
+footer {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+</style>
+
+</head>
+<body>
+
+  <header>
+    <h1>🧺 Place Your Order</h1>
+    <p>Fill out the form below to place your order easily.</p>
+  </header>
+
+  <main>
+    <form id="orderForm" class="order-form">
+      <label>Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label>Phone Number / WhatsApp</label>
+      <input type="tel" id="phone" placeholder="e.g. +233 24 123 4567" required>
+
+      <label>Basket Name or Type</label>
+      <input type="text" id="basket" placeholder="e.g. Large Woven Basket" required>
+
+      <label>Quantity</label>
+      <input type="number" id="quantity" min="1" value="1" required>
+
+      <label>Location</label>
+      <input type="text" id="location" placeholder="Your delivery address or city" required>
+
+      <label>Additional Message (Optional)</label>
+      <textarea id="message" placeholder="Any special notes?"></textarea>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Matts Baskets — Handcrafted with Love.</p>
+  </footer>
+
+  <script>
+document.getElementById("orderForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const basket = document.getElementById("basket").value;
+  const quantity = document.getElementById("quantity").value;
+  const location = document.getElementById("location").value;
+  const message = document.getElementById("message").value;
+
+  const text = `🧺 *New Basket Order!*%0A
+  👤 Name: ${name}%0A
+  📞 Phone: ${phone}%0A
+  🧺 Basket Type: ${basket}%0A
+  🔢 Quantity: ${quantity}%0A
+  📍 Location: ${location}%0A
+  💬 Message: ${message || "None"}`;
+
+  // Replace with your client's WhatsApp number (format: 233XXXXXXXXX)
+  const whatsappNumber = "233247838767";
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+  window.open(whatsappURL, "_blank");
+});
+
+  </script>
+</body>
+</html>

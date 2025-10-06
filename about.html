@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Matts Baskets | Rirosa Global Ltd</title>
+  <link rel="stylesheet" href="about.css">
+
+
+  <style>
+:root {
+  --primary-green: #2e7d32; /* deep natural green */
+  --accent-gold: #c99b44;  /* woven basket gold */
+  --light-bg: #faf8f5;
+  --text-dark: #333;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 6%;
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.logo span {
+  color: var(--accent-gold);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-green);
+}
+
+.menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--primary-green);
+}
+
+/* HERO SECTION */
+.about-hero {
+  background: url('baskets-bg.jpg') center/cover no-repeat;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-hero .overlay {
+  background-color: rgba(46, 125, 50, 0.55);
+  padding: 2rem;
+  text-align: center;
+  color: var(--white);
+  border-radius: 12px;
+  backdrop-filter: blur(3px);
+}
+
+.about-hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* CONTENT */
+.container {
+  padding: 3rem 10%;
+  line-height: 1.8;
+}
+
+.container h2 {
+  text-align: center;
+  color: var(--primary-green);
+  margin-bottom: 1.5rem;
+}
+
+.container p {
+  color: #444;
+}
+
+.mission {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.mission div {
+  flex: 1 1 45%;
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-left: 5px solid var(--primary-green);
+}
+
+.mission h3 {
+  color: var(--primary-green);
+}
+
+.values {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.values h3 {
+  color: var(--primary-green);
+}
+
+.values ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.values li {
+  padding: 0.5rem 0;
+  font-weight: 500;
+  color: var(--accent-gold);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primary-green);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+footer h3 {
+  color: var(--accent-gold);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--white);
+    width: 200px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .mission {
+    flex-direction: column;
+  }
+}
+
+
+  </style>
+
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Matts<span>Baskets</span></h1>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="Order.html">Order</a></li>
+      </ul>
+      <div class="menu-btn" id="menu-btn">☰</div>
+    </nav>
+  </header>
+
+  <section class="about-hero">
+    <div class="overlay">
+      <h2>We Weave Culture Into Every Basket</h2>
+      <p>Rirosa Global Ltd is proudly Ghanaian, sharing authentic African craftsmanship with the world.</p>
+    </div>
+  </section>
+
+  <section class="about-content">
+    <div class="container">
+      <h2>Our Story</h2>
+      <p>
+        Matts Baskets began with a simple dream — to showcase the beauty and skill of African artisans to a global audience.
+        Our baskets are 100% handwoven in Ghana using eco-friendly materials, blending traditional artistry with modern design.
+      </p>
+
+      <div class="mission">
+        <div>
+          <h3>🌿 Our Mission</h3>
+          <p>
+            To empower local weavers and promote sustainable craftsmanship that tells Africa’s story — one basket at a time.
+          </p>
+        </div>
+        <div>
+          <h3>🌍 Our Vision</h3>
+          <p>
+            To become a leading name in authentic African home decor and lifestyle products worldwide.
+          </p>
+        </div>
+      </div>
+
+      <div class="values">
+        <h3>Our Core Values</h3>
+        <ul>
+          <li>✨ Authentic Craftsmanship</li>
+          <li>💪 Empowering Local Communities</li>
+          <li>🌱 Sustainability</li>
+          <li>💖 Integrity & Fair Trade</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h3>Get In Touch</h3>
+    <p>Accra, Ghana</p>
+    <p>📞 +233 247 838 767</p>
+    <p>🌐 Shipping Worldwide via DHL & Ghana Post</p>
+    <p>&copy; 2025 Rirosa Global Ltd — Matts Baskets</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

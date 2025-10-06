@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Matts Baskets | Rirosa Global Ltd</title>
+  <link rel="stylesheet" href="gallery.css">
+
+
+        <style>
+            :root {
+  --primary-green: #2e7d32;
+  --accent-gold: #c99b44;
+  --light-bg: #faf8f5;
+  --text-dark: #333;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 6%;
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.logo span {
+  color: var(--accent-gold);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-green);
+}
+
+.menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--primary-green);
+}
+
+/* HERO SECTION */
+.gallery-hero {
+  background: url('baskets-bg.jpg') center/cover no-repeat;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-hero .overlay {
+  background-color: rgba(46, 125, 50, 0.6);
+  padding: 2rem;
+  text-align: center;
+  color: var(--white);
+  border-radius: 12px;
+  backdrop-filter: blur(3px);
+}
+
+.gallery-hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* GALLERY GRID */
+.gallery-section {
+  padding: 3rem 8%;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primary-green);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+footer h3 {
+  color: var(--accent-gold);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--white);
+    width: 200px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+        </style>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Matts<span>Baskets</span></h1>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="Order.html">Order</a></li>
+      </ul>
+      <div class="menu-btn" id="menu-btn">☰</div>
+    </nav>
+  </header>
+
+  <section class="gallery-hero">
+    <div class="overlay">
+      <h2>Our Handwoven Masterpieces</h2>
+      <p>Explore our collection of African baskets — crafted with love, skill, and heritage.</p>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-grid">
+        <!-- 28 Images -->
+        <!-- You can replace these src values with actual image paths -->
+        <!-- Example: images/basket1.jpg -->
+  <img src="/images/IMG-20251004-WA0000.jpg" alt="basket 1" loading="lazy">
+  <img src="/images/IMG-20251004-WA0001.jpg" alt="basket 2" loading="lazy">
+  <img src="/images/IMG-20251004-WA0002.jpg" alt="Basket 3" loading="lazy">
+  <img src="/images/IMG-20251004-WA0003 (1).jpg" alt="basket 4" loading="lazy">
+  <img src="/images/IMG-20251004-WA0003.jpg" alt="basket 5" loading="lazy">
+  <img src="/images/IMG-20251004-WA0004.jpg" alt="basket 6" loading="lazy">
+  <img src="/images/IMG-20251004-WA0005.jpg" alt="basket 7" loading="lazy">
+  <img src="/images/IMG-20251004-WA0006.jpg" alt="basket 8" loading="lazy">
+  <img src="/images/IMG-20251004-WA0007.jpg" alt="basket 9" loading="lazy">
+  <img src="/images/IMG-20251004-WA0008.jpg" alt="basket 10" loading="lazy">
+  <img src="/images/IMG-20251004-WA0009.jpg" alt="basket 11" loading="lazy">
+  <img src="/images/IMG-20251004-WA0010.jpg" alt="basket 12" loading="lazy">
+  <img src="/images/IMG-20251004-WA0011.jpg" alt="basket 13" loading="lazy">
+  <img src="/images/IMG-20251004-WA0012.jpg" alt="basket 14" loading="lazy">
+  <img src="/images/IMG-20251004-WA0013.jpg" alt="basket 15" loading="lazy">
+  <img src="/images/IMG-20251004-WA0016.jpg" alt="basket 16" loading="lazy">
+  <img src="/images/IMG-20251004-WA0017 (1).jpg" alt="basket 17" loading="lazy">
+  <img src="/images/IMG-20251004-WA0017.jpg" alt="basket 18" loading="lazy">
+  <img src="/images/IMG-20251004-WA0018.jpg" alt="basket 19" loading="lazy">
+  <img src="/images/IMG-20251004-WA0016.jpg" alt="basket 20" loading="lazy">
+  <img src="/images/IMG-20251004-WA0017 (1).jpg" alt="basket 21" loading="lazy">
+  <img src="/images/IMG-20251004-WA0019.jpg" alt="basket 22" loading="lazy">
+  <img src="/images/IMG-20251004-WA0020.jpg" alt="basket 23" loading="lazy">
+  <img src="/images/IMG-20251004-WA0021.jpg" alt="basket 24" loading="lazy">
+  <img src="/images/IMG-20251004-WA0022.jpg" alt="basket 25" loading="lazy">
+  <img src="/images/IMG-20251004-WA0023.jpg" alt="basket 26" loading="lazy">
+  <img src="/images/IMG-20251004-WA0024.jpg" alt="basket 27" loading="lazy">
+  <img src="/images/IMG-20251004-WA0025.jpg" alt="basket 28" loading="lazy">
+      </div>
+    </div>
+</section>
+  <footer id="contact">
+    <h3>Contact Us</h3>
+    <p>Accra, Ghana</p>
+    <p>📞 +233 247 838 767</p>
+    <p>🌐 Shipping Worldwide via DHL & Ghana Post</p>
+    <p>&copy; 2025 Rirosa Global Ltd — Matts Baskets</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
